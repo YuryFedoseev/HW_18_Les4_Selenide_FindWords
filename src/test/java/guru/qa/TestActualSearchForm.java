@@ -28,6 +28,7 @@ public class TestActualSearchForm {
         $(byXpath("//button[contains(@class,'f6 Link')]")).click();
         $("#wiki-pages-box").shouldBe(text("SoftAssertions"));
         $(byText("Soft assertions")).click();
+        $(".Layout-main").shouldHave(text("Using JUnit5 extend"));
 
         $("#wiki-wrapper").shouldHave(text("Using JUnit5 extend test class: " + "@ExtendWith({SoftAssertsExtension.class}) " +
                 "class Tests { " + "  @Test " + "  void test() { " + "    Configuration.assertionMode = SOFT; " + " open(\"page.html\"); "));
